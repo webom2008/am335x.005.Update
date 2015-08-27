@@ -1,0 +1,30 @@
+*{
+    font-size: 14px;
+}
+
+QLabel#InfoLabel
+{
+    color: red;
+    text-align: center;
+}
+
+QWidget#centralWidget
+{
+    background: #404040;
+}
+
+QTextBrowser {
+    background-color: black;
+    color: white;
+}
+
+QProgressBar {
+    border: 2px solid grey;
+    border-radius: 5px;
+    text-align: center;
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    width: 20px;
+}
