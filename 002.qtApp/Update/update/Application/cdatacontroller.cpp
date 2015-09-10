@@ -554,7 +554,8 @@ int CDataController::doUpdatePatientMonitor(const QString &binFileName)
     const char rm_cmd3[] = "rm -f /mnt/userfs/PatientMonitor";
 //    const char rm_cmd4[] = "rm -f /mnt/userfs/updateTime";
     const char sync_cmd[] = "sync";
-    const char chmod_cmd[] = "chmod 777 /mnt/userfs/* -R";
+    const char chmod_cmd[] = "chmod 777 /mnt/userfs/Monitor";
+    const char chmod_cmd2[] = "chmod 777 /mnt/userfs/PatientMonitor";
     char tar_cmd[150];
 
     memset(tar_cmd, 0x00, sizeof(tar_cmd));
@@ -582,6 +583,7 @@ int CDataController::doUpdatePatientMonitor(const QString &binFileName)
     CMyConsole::addStr2Console(print);
 
     system(chmod_cmd);
+    system(chmod_cmd2);
     CMyConsole::refreshPrecessBar(80);
 
     system(sync_cmd);
